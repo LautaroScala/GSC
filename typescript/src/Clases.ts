@@ -1,4 +1,4 @@
-export class Vehiculo{
+export abstract class Vehiculo{
 
     // propiedades publicas
     
