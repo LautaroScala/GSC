@@ -34,3 +34,18 @@ const miembros = [
 ];
 miembros[0] = 12345;
 console.log('[Ejercicio 1.4]', miembros);
+// EJ 1.5
+const secuencia = Array.from(Array(10).keys());
+const animales = ['pinguino', 'oso hormiguero', 'zorro', 'jirafa'];
+const cadenasYNumeros = [1, 'uno', 2, 'dos', 3, 'tres'];
+const todosMisArreglos = [secuencia, animales, cadenasYNumeros];
+console.log('Ejercicio 1.5', todosMisArreglos);
+// EJ 1.6
+const elementoInventario = ['tuerca', 11];
+// despues lo desestructuramos
+const [nombre, cantidad] = elementoInventario;
+const mensaje = agregarInventario(nombre, cantidad);
+console.log('[Ejercicio 1.6]', mensaje);
+function agregarInventario(nombre, cantidad) {
+    return `Se agregaron ${cantidad} ${nombre}s al inventario.`;
+}
