@@ -7,4 +7,8 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'CursoSanCristobal';
+
+  getFullTitle():string {
+    return `${this.title} Angular`
+  }
 }
