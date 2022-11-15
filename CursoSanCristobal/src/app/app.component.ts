@@ -1,4 +1,5 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
+import { TestService } from './test.service';
 
 
 @Component({
@@ -6,11 +7,19 @@ import { Component } from '@angular/core';
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.css']
 })
-export class AppComponent {
+export class AppComponent implements OnInit {
   title = 'CursoSanCristobal';
   padre = 'Lautaro';
   mensaje = 'nada';
-  elements = ['Uno', 'Dos','Tres', 'Cuatro'];
+  elements!: string[];
+
+  // Inyectando servicio Test
+  constructor(public service: TestService){
+
+  }
+  ngOnInit(): void {
+    this.elements = this.service.getElementos();
+  }
 
   getFullTitle():string {
     return `${this.title} Angular`

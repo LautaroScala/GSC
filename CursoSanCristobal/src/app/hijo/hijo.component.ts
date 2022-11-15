@@ -1,4 +1,5 @@
 import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
+import { TestService } from '../test.service';
 
 @Component({
   selector: 'app-hijo',
@@ -13,7 +14,7 @@ export class HijoComponent implements OnInit {
 
   @Output() avisar = new EventEmitter<string>();
 
-  constructor() {
+  constructor(private service:TestService) {
     this.imgSrc = 'https://picsum.photos/200/200?ts100'
    }
   habDes():void{

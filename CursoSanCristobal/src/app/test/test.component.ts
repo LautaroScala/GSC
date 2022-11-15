@@ -1,4 +1,5 @@
 import { Component, Input, OnInit } from '@angular/core';
+import { TestService } from '../test.service';
 
 @Component({
   selector: 'app-test',
@@ -11,8 +12,9 @@ export class TestComponent implements OnInit {
   estilos = {
     rojo:true,
     fondo:false
-  }
-  constructor() { }
+  };
+
+  constructor(private service:TestService) { }
 
   ngOnInit(): void {
   }
