@@ -7,8 +7,15 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'CursoSanCristobal';
+  padre = 'Lautaro';
+  mensaje = '';
 
   getFullTitle():string {
     return `${this.title} Angular`
+  }
+
+  avisoDelHijo(evento:string): void{
+    console.log(evento);
+    this.mensaje = `recibi el mensaje: ${evento}`;
   }
 }

@@ -6,7 +6,7 @@ import { Component, Input, OnInit } from '@angular/core';
   styleUrls: ['./test.component.css']
 })
 export class TestComponent implements OnInit {
-
+  @Input() padre2 = "";
   @Input() caso1!: string;
   constructor() { }
 

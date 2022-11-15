@@ -1,3 +1,5 @@
 <h1>Hola mundo! {{ title }}</h1>
 <p>{{ getFullTitle() }}</p>
-<app-test [caso1]="title"></app-test>
+<p>{{ mensaje }}</p>
+<app-test [caso1]="title" [padre2]="padre"></app-test>
+<app-hijo [padre1]="padre" (avisar)="avisoDelHijo($event)"></app-hijo>
