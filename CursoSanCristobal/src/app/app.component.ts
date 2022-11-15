@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 
+
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
@@ -8,7 +9,8 @@ import { Component } from '@angular/core';
 export class AppComponent {
   title = 'CursoSanCristobal';
   padre = 'Lautaro';
-  mensaje = '';
+  mensaje = 'nada';
+  elements = ['Uno', 'Dos','Tres', 'Cuatro'];
 
   getFullTitle():string {
     return `${this.title} Angular`

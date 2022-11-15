@@ -8,6 +8,10 @@ import { Component, Input, OnInit } from '@angular/core';
 export class TestComponent implements OnInit {
   @Input() padre2 = "";
   @Input() caso1!: string;
+  estilos = {
+    rojo:true,
+    fondo:false
+  }
   constructor() { }
 
   ngOnInit(): void {
