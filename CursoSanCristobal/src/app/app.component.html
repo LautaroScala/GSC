@@ -1,10 +1,12 @@
 <h1>Hola mundo! {{ title }}</h1>
-<p>{{ getFullTitle() }}</p>
+<!-- <p>{{ getFullTitle() }}</p>
 <p *ngIf="mensaje !== 'nada'">{{ mensaje }}</p>
-<app-test [caso1]="title" [padre2]="padre"></app-test>
 <app-hijo [padre1]="padre" (avisar)="avisoDelHijo($event)"></app-hijo>
 
-<p>lista iterada</p>
+<p>lista iterada</p> -->
 <ul>
-    <li *ngFor="let item of elements; let i = index"> {{i+1}} - {{ item }}</li>
+    <li><a routerLink="/" routerLinkActive="active" [routerLinkActiveOptions]="{exact : true}">Home</a></li>
+    <li *ngFor="let item of elements"><a [routerLink]="[item.toLowerCase()]" routerLinkActive="active">{{item}}</a></li>
 </ul>
+
+<router-outlet></router-outlet>

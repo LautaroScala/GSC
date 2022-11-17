@@ -1,5 +1,7 @@
 import { Component, Input, OnInit } from '@angular/core';
-import { TestService } from '../test.service';
+import { ActivatedRoute } from '@angular/router';
+import { User } from '../user';
+import { UsersService } from '../users.service';
 
 @Component({
   selector: 'app-test',
@@ -7,16 +9,17 @@ import { TestService } from '../test.service';
   styleUrls: ['./test.component.css']
 })
 export class TestComponent implements OnInit {
-  @Input() padre2 = "";
-  @Input() caso1!: string;
   estilos = {
     rojo:true,
     fondo:false
   };
-
-  constructor(private service:TestService) { }
+  dato: User | undefined;
+  
+  constructor(private service:UsersService, private route: ActivatedRoute) { }
 
   ngOnInit(): void {
+    const id = this.route.snapshot.paramMap.get('id');
+    this.dato = this.service.getUserById(id);
   }
 
 }
