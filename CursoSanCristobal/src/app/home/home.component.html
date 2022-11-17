@@ -1,1 +1,4 @@
-<p>home works!</p>
+<a routerLink="/" routerLinkActive="active" [routerLinkActiveOptions]="{exact : true}">Home</a>
+<ul>
+    <li *ngFor="let item of elements"><a [routerLink]="[item.toLowerCase()]" routerLinkActive="active">{{item}}</a></li>
+</ul>

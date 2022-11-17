@@ -6,9 +6,8 @@
     <p>USERNAME: {{ dato.username }}</p>
     <p>NOMBRE: {{ dato.name }}</p>
     <p>NOMBRE COMPLETO: {{ dato.fullname }}</p>
-    <a routerLink="/uno">Volver</a>
 </div>
 <div *ngIf="!dato">
     <p>No existe el usuario!</p>
-    <a routerLink="/uno">Volver</a>
 </div>
+<a routerLink="/">Volver</a>
