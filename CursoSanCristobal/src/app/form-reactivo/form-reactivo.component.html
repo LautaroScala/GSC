@@ -1,0 +1,27 @@
+<form [formGroup]="personaForm" (ngSubmit)="onSubmit()">
+    <h1>Ingreso</h1>
+
+    <label>
+        Usuario: 
+        <input type="text" formControlName="user">
+    </label>
+
+    <p></p>
+
+    <label>
+        Contraseña: 
+        <input [type]="[oculto]" formControlName="password"><img (click)="hidePassword()" width="20" height="20" src="https://cdn-icons-png.flaticon.com/512/14/14777.png">
+    </label>
+    <div formGroupName="address">
+        <p>Calle: <input type="text" formControlName="street"></p>
+        <p>Ciudad: <input type="text" formControlName="city"></p>
+        <p>Provincia / Estado: <input type="text" formControlName="state"></p>
+        <p>Codigo postal: <input type="text" formControlName="zipcode"></p>
+    </div>
+
+    <p>{{ personaForm.value | json }}</p>
+    <p>{{ personaForm.valid }}</p>
+    <button [disabled]="!personaForm.valid">Enviar</button>
+</form>
+
+<button (click)="reset()">Resetear</button>

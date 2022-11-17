@@ -11,7 +11,6 @@ export class UnoComponent implements OnInit {
    father = 'Uno';
    users!:User[];
   constructor(private userService : UsersService) { }
-
   ngOnInit(): void {
     this.users = this.userService.getUsers();
   }

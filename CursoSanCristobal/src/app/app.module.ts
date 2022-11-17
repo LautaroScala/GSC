@@ -8,6 +8,9 @@ import { HijoComponent } from './hijo/hijo.component';
 import { UnoComponent } from './uno/uno.component';
 import { DosComponent } from './dos/dos.component';
 import { HomeComponent } from './home/home.component';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { FormPlantillaComponent } from './form-plantilla/form-plantilla.component';
+import { FormReactivoComponent } from './form-reactivo/form-reactivo.component';
 
 @NgModule({
   declarations: [
@@ -16,11 +19,15 @@ import { HomeComponent } from './home/home.component';
     HijoComponent,
     UnoComponent,
     DosComponent,
-    HomeComponent
+    HomeComponent,
+    FormPlantillaComponent,
+    FormReactivoComponent
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    ReactiveFormsModule,
+    FormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]
