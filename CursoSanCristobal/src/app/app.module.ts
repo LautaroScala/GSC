@@ -12,6 +12,7 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { FormPlantillaComponent } from './form-plantilla/form-plantilla.component';
 import { FormReactivoComponent } from './form-reactivo/form-reactivo.component';
 import { CuatroComponent } from './cuatro/cuatro.component';
+import { CincoComponent } from './cinco/cinco.component';
 
 @NgModule({
   declarations: [
@@ -23,7 +24,8 @@ import { CuatroComponent } from './cuatro/cuatro.component';
     HomeComponent,
     FormPlantillaComponent,
     FormReactivoComponent,
-    CuatroComponent
+    CuatroComponent,
+    CincoComponent
   ],
   imports: [
     BrowserModule,

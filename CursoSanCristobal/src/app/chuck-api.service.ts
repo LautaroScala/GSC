@@ -11,9 +11,9 @@ import { API } from './api';
 
 export class ChuckAPIService {
 
-  constructor(private http:HttpClient) { }
+  constructor(private http: HttpClient) { }
 
   getMessage(): Observable<HttpResponse<API>> {
-    return this.http.get<API>(`${environment.api}/jokes/random`,{ observe: 'response'}).pipe(retry(3));
+    return this.http.get<API>(`${environment.api}/jokes/random`, { observe: 'response' }).pipe(retry(3));
   }
 }

@@ -1,0 +1,27 @@
+<h1>Consulta al Backend</h1>
+<p>Tomar como ejemplo, no hay backend configurado. (todavia)</p>
+
+<!-- <ul>
+    <li *ngFor="let user of users$ | async">
+        {{ user.name }} 
+        <button (click)="deleteUser(user.id)">Borrar</button>
+    </li>
+</ul> -->
+
+<form [formGroup]="userForm">
+    <p><label>
+        Nombre: <input type="text" formControlName="name">
+    </label>
+    </p>
+    <p>
+    <label>
+        Nombre Completo: <input type="text" formControlName="fullname">
+    </label>
+    </p>
+    <p>
+    <label>
+        Usuario: <input type="text" formControlName="username">
+    </label>
+    </p>
+    <p><button (click)="onSubmit()"></button></p>
+</form>
