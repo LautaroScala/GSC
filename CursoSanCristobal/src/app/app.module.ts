@@ -1,6 +1,6 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
-
+import { HttpClientModule } from '@angular/common/http'
 import { AppRoutingModule} from './app-routing.module';
 import { AppComponent } from './app.component';
 import { TestComponent } from './test/test.component';
@@ -11,6 +11,7 @@ import { HomeComponent } from './home/home.component';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { FormPlantillaComponent } from './form-plantilla/form-plantilla.component';
 import { FormReactivoComponent } from './form-reactivo/form-reactivo.component';
+import { CuatroComponent } from './cuatro/cuatro.component';
 
 @NgModule({
   declarations: [
@@ -21,13 +22,15 @@ import { FormReactivoComponent } from './form-reactivo/form-reactivo.component';
     DosComponent,
     HomeComponent,
     FormPlantillaComponent,
-    FormReactivoComponent
+    FormReactivoComponent,
+    CuatroComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     ReactiveFormsModule,
-    FormsModule
+    FormsModule,
+    HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent]
