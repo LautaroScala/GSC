@@ -19,7 +19,6 @@ export class FormReactivoComponent implements OnInit {
       })
     });
 
-
   /* personaForm = new FormGroup(
     {
       user: new FormControl('',Validators.required),
@@ -33,9 +32,11 @@ export class FormReactivoComponent implements OnInit {
     }
   ); */
   oculto = 'password'
+  email = new FormControl('',[Validators.required]);
   constructor(private fb: FormBuilder) { }
 
   ngOnInit(): void {
+
   }
 
   reset(): void {
