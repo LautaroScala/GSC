@@ -1,24 +1,21 @@
 import { Component, OnInit } from '@angular/core';
-import { FormBuilder, FormControl, FormGroup, Validators } from '@angular/forms';
+import {
+  FormBuilder,
+  FormControl,
+  FormGroup,
+  Validators,
+} from '@angular/forms';
 
 @Component({
   selector: 'app-form-reactivo',
   templateUrl: './form-reactivo.component.html',
-  styleUrls: ['./form-reactivo.component.css']
+  styleUrls: ['./form-reactivo.component.css'],
 })
 export class FormReactivoComponent implements OnInit {
-  personaForm = this.fb.group(
-    {
-      user: ['', Validators.required],
-      password: ['', [Validators.required, Validators.minLength(8)]],
-      address: this.fb.group({
-        street: [''],
-        city: [''],
-        state: [''],
-        zipcode: ['']
-      })
+  personaForm = this.fb.group({
+    user: ['', [Validators.required,Validators.minLength(2)]],
+    password: ['', [Validators.required, Validators.minLength(8)]],
     });
-
   /* personaForm = new FormGroup(
     {
       user: new FormControl('',Validators.required),
@@ -31,13 +28,12 @@ export class FormReactivoComponent implements OnInit {
       })
     }
   ); */
-  oculto = 'password'
-  email = new FormControl('',[Validators.required]);
-  constructor(private fb: FormBuilder) { }
-
-  ngOnInit(): void {
-
+  oculto = 'password';
+  email = new FormControl('', [Validators.required]);
+  constructor(private fb: FormBuilder) {
   }
+
+  ngOnInit(): void {}
 
   reset(): void {
     // this.personaForm.setValue();
@@ -50,7 +46,7 @@ export class FormReactivoComponent implements OnInit {
   }
 
   onSubmit(): void {
-    console.log('llegaron los datos: ', this.personaForm.value)
+    console.log('llegaron los datos: ', this.personaForm.value);
   }
   hidePassword(): void {
     if (this.oculto === 'password') {
@@ -60,3 +56,4 @@ export class FormReactivoComponent implements OnInit {
     }
   }
 }
+ 

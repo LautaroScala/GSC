@@ -12,13 +12,13 @@ export class FormPlantillaComponent implements OnInit {
   user: User[] = [{
     id:1,
     username: 'Wo0fuck',
-    name:'Lautaro',
+    password:'hidden',
     fullname:'Lautaro Scala'
   },
   {
     id:2,
     username:'Ninaoni',
-    name: 'Linda',
+    password: 'hidden',
     fullname: 'Linda Scala'
   }]
   constructor() { }
